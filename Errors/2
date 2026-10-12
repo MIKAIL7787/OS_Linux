@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ $# -lt 2 ]; then
+    echo "использование: $0 <файл> <число>" >&2
+    exit 1
+fi
+if ! [[ $2 =~ ^-?[0-9]+$ ]]; then
+    exit 2
+fi
+echo "OK"
